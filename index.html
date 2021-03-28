@@ -1,30 +1,31 @@
 <!DOCTYPE html> 
 <html> 
-<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative Maker Space Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
  
 THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
-Author 1 Daijah Jordan
-Author 2
+Tim Riedel
+Daijah Jordan
  
 Further Information:
-http://diystream.cns.utexas.edu/
-
+http://cns.utexas.edu/fri
+ 
 Research Educator:
 Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+This code will provide percentages of whether someone is experiencing a anxiety or depression by answering a set of four questions, and giving them the percentages of their anxiety and depression probalities. 
  
 Known Issues:
-blah, blah, blah, blah
+This is not one hundred percent accurate and only offers four questions, so it should not be used as a proper diagnosis. 
+https://www.w3schools.com/w3css/default.asp
+https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-
+	
    <head> 
-     
       <title>Hello World</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
@@ -35,7 +36,7 @@ blah, blah, blah, blah
 
 <script>
 	//depression and anxiety variables
-        var deprssion_count = 0;
+        var depression_count = 0;
         var anxiety_count = 0;
 
 	//Function to add to the depression count
@@ -50,12 +51,12 @@ blah, blah, blah, blah
         }
 	//Function created to get end percentage results
 	function calculate(){
-	//Variable for the allergy percentage
+	//Variable for the depression percentage
 	var depression_percentage = (depression_count/10)*100;
 	//Variable for the cold percentage
 	var anxiety_percentage = (anxiety_count/10)*100;
 	//inner HTML command (fills in the ID on the results page
-	document.getElementById("results1").innerHTML = "Probability it is depression: " + depression_percentage + "%<br> Probability it is anxiety: " + anxiety_percentage + "%";
+	document.getElementById("results1").innerHTML = "Probability it is depression: " + depression_percentage + "%<br> Probability it is a anxiety: " + anxiety_percentage + "%";
 	
 	}	
 
@@ -118,6 +119,7 @@ blah, blah, blah, blah
 		<a href="#two"  onclick="anxietyAdd();" class="w3-btn w3-black">No</a>
     	</div>
 </div>
+
 <!--New division creates Page 2-->
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
@@ -127,7 +129,7 @@ blah, blah, blah, blah
 	
 	<div id="content" class="w3-container">
 	<!--Question 2 Content-->
-	<p>Are you feeling nervous or on edge?.</p>
+	<p>Do you feel nervous or on edge?.</p>
 		<!--Yes Button with onclick anxiety command to add to anxiety counter-->
 		<a href="#three"  onclick="anxietyAdd();" class="w3-btn w3-black">Yes</a>
 		<!--No Button with onclick depression command to add to depression counter-->
@@ -185,7 +187,7 @@ blah, blah, blah, blah
         
 	</div>
 </div>
-<!--New division creates Page 6-->
+<!--New division creates Page 6-->		
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
 		<!--Header Content-->
@@ -194,46 +196,48 @@ blah, blah, blah, blah
     
     	<div id="content" class="w3-container">
 		<!--Question 6 Content-->
-		<p>Do you have trouble falling asleep or staying asleep?.</p>
-		<!--Yes Button with onclick depression command to add to depression counter-->
-		<a href="#seven"  onclick="depressionAdd();" class="w3-btn w3-black">Yes</a>
-		<!--No Button with onclick anxiety command to add to anxiety counter-->
-		<a href="#seven"  onclick="anxietyAdd();" class="w3-btn w3-black">No</a>
+		<p>Do you become easily annoyed or irritable?.</p>
+		<!--Yes Button with onclick anxiety command to add to anxiety counter-->
+		<a href="#seven"  onclick="anxietyAdd();" class="w3-btn w3-black">Yes</a>
+		<!--No Button with onclick depression command to add to depression counter-->
+		<a href="#seven"  onclick="depressionAdd();" class="w3-btn w3-black">No</a>
         
 	</div>
 </div>
-<!--New division creates Page 7-->
+<!--New division creates Page 7-->		
 <div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
 		<!--Header Content-->
 		<h1>Question 7</h1>
 	</div>
-	
-	<div id="content" class="w3-container">
-	<!--Question 7 Content-->
-	<p>Do you become easily annoyed or irritable?.</p>
+    
+    	<div id="content" class="w3-container">
+		<!--Question 7 Content-->
+		<p>Do you become so restless its hard to sit still?.</p>
 		<!--Yes Button with onclick anxiety command to add to anxiety counter-->
 		<a href="#eight"  onclick="anxietyAdd();" class="w3-btn w3-black">Yes</a>
 		<!--No Button with onclick depression command to add to depression counter-->
 		<a href="#eight"  onclick="depressionAdd();" class="w3-btn w3-black">No</a>
+        
 	</div>
-</div>	
+</div>
 <!--New division creates Page 8-->
 <div class="page" id="eight">
 	<div class="w3-container w3-flat-carrot">
 		<!--Header Content-->
 		<h1>Question 8</h1>
 	</div>
-	
-	<div id="content" class="w3-container">
-	<!--Question 8 Content-->
-	<p>Do you worry too much about things?.</p>
-		<!--Yes Button with onclick anxiety command to add to anxiety counter-->
-		<a href="#nine"  onclick="anxietyAdd();" class="w3-btn w3-black">Yes</a>
-		<!--No Button with onclick depression command to add to depression counter-->
-		<a href="#nine"  onclick="depressionAdd();" class="w3-btn w3-black">No</a>
+    
+    	<div id="content" class="w3-container">
+		<!--Question 8 Content-->
+		<p>Do you have a poor apetite?.</p>
+		<!--Yes Button with onclick depression command to add to depression counter-->
+		<a href="#nine"  onclick="depressionAdd();" class="w3-btn w3-black">Yes</a>
+		<!--No Button with onclick anxiety command to add to anxiety counter-->
+		<a href="#nine"  onclick="anxietyAdd();" class="w3-btn w3-black">No</a>
+        
 	</div>
-</div>	
+</div>
 <!--New division creates Page 9-->
 <div class="page" id="nine">
 	<div class="w3-container w3-flat-carrot">
@@ -243,7 +247,7 @@ blah, blah, blah, blah
     
     	<div id="content" class="w3-container">
 		<!--Question 9 Content-->
-		<p>Do you have a poor apetite?.</p>
+		<p>Do you have trouble falling asleep or staying asleep?.</p>
 		<!--Yes Button with onclick depression command to add to depression counter-->
 		<a href="#ten"  onclick="depressionAdd();" class="w3-btn w3-black">Yes</a>
 		<!--No Button with onclick anxiety command to add to anxiety counter-->
@@ -251,22 +255,23 @@ blah, blah, blah, blah
         
 	</div>
 </div>
-<!--New division creates Page 10-->
+<!--New division creates Page 10-->		
 <div class="page" id="ten">
 	<div class="w3-container w3-flat-carrot">
 		<!--Header Content-->
 		<h1>Question 10</h1>
 	</div>
-	
-	<div id="content" class="w3-container">
-	<!--Question 10 Content-->
-	<p>Do you become so restless it's hard to sit still?.</p>
+    
+    	<div id="content" class="w3-container">
+		<!--Question 10 Content-->
+		<p>Do you worry too much about things?.</p>
 		<!--Yes Button with onclick anxiety command to add to anxiety counter-->
 		<a href="#eleven"  onclick="anxietyAdd();" class="w3-btn w3-black">Yes</a>
 		<!--No Button with onclick depression command to add to depression counter-->
 		<a href="#eleven"  onclick="depressionAdd();" class="w3-btn w3-black">No</a>
+        
 	</div>
-</div>	
+</div>
 <!--New division Creates Page 11-->
 <div class="page" id="eleven">
 	<div class="w3-container w3-flat-carrot">
@@ -289,8 +294,4 @@ blah, blah, blah, blah
 </footer>
 
 </body>
-</html>
-
-	   
-   </body>
 </html>
